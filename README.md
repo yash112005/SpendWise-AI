@@ -51,6 +51,14 @@ npm run dev
 ```
 
 ---
+## Day 2 Progress
+
+### Completed
+
+- Pricing Research
+- Pricing Data File
+- Audit Engine 
+- Tests Likhna
 
 ## Current Status
 
