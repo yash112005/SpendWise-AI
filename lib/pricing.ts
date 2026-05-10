@@ -36,8 +36,8 @@ export type ApiPricing = {
     cachedInput?: number
     output: number
   }
-  
-  
+
+
 
   unit: string
 }
@@ -47,8 +47,8 @@ export const PRICING: Record<string, PricingPlan[]> = {
     { plan: 'Hobby', pricePerSeat: 0 },
     { plan: 'Pro', pricePerSeat: 20 },
     { plan: 'Pro+', pricePerSeat: 60 },
-    { plan: 'Ultra', pricePerSeat: 200 }, 
-    { plan: 'Team', pricePerSeat: 40 }, 
+    { plan: 'Ultra', pricePerSeat: 200 },
+    { plan: 'Team', pricePerSeat: 40 },
     { plan: 'Enterprise',customPricing: true ,pricePerSeat: 0}, 
 
   ],
@@ -68,39 +68,39 @@ export const PRICING: Record<string, PricingPlan[]> = {
     { plan: 'Enterprise', pricePerSeat: 0, customPricing: true },
   ],
 
- chatgpt: [
-  { plan: 'Free', pricePerSeat: 0 },
+  chatgpt: [
+    { plan: 'Free', pricePerSeat: 0 },
 
-  { plan: 'Go', pricePerSeat: 4 },
+    { plan: 'Go', pricePerSeat: 4 },
 
-  { plan: 'Plus', pricePerSeat: 20 },
-  { plan: 'Pro', pricePerSeat: 113 },
+    { plan: 'Plus', pricePerSeat: 20 },
+    { plan: 'Pro', pricePerSeat: 113 },
 
-  {
-    plan: 'Business Codex',
-    usagePricing: true,
-    pricePerSeat: 0,
-    
-  }, 
-  {
-    plan: 'Business ChatGPT & Codex',
-    pricePerSeat: 20,
-    
-  },
+    {
+      plan: 'Business Codex',
+      usagePricing: true,
+      pricePerSeat: 0,
 
-  {
-    plan: 'Enterprise',
-    customPricing: true,
-    pricePerSeat: 0,
-  }, 
+    },
+    {
+      plan: 'Business ChatGPT & Codex',
+      pricePerSeat: 20,
 
-  {
-    plan: 'API',
-    customPricing: true,
-    pricePerSeat: 0,
-  }, 
+    },
 
-],
+    {
+      plan: 'Enterprise',
+      customPricing: true,
+      pricePerSeat: 0,
+    },
+
+    {
+      plan: 'API',
+      customPricing: true,
+      pricePerSeat: 0,
+    },
+
+  ],
   gemini: [
     {
       "plan": "Free (15 GB)",
