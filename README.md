@@ -60,13 +60,22 @@ npm run dev
 - Audit Engine 
 - Tests Likhna
 
+## Day 3  Progress
+
+### Completed
+- API Route
+- Results Page
+
+
 ## Current Status
 
 Day 1 completed successfully ✅
 Day 2 completed successfully ✅
+Day 3 completed sucessfully ✅
 
 Next step:
-- API Route
-- Results Page
+- Supabase Setup
+- Anthropic API Summary
+- Email Capture Component
 
 ```
