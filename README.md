@@ -67,15 +67,23 @@ npm run dev
 - Results Page
 
 
+## Day 4  Progress
+
+### Completed
+- Supabase Setup
+- Anthropic API Summary
+- Email Capture Component
+
 ## Current Status
 
 Day 1 completed successfully ✅
 Day 2 completed successfully ✅
 Day 3 completed sucessfully ✅
+Day 4 completed sucessfully ✅
 
 Next step:
-- Supabase Setup
-- Anthropic API Summary
-- Email Capture Component
+- OG Tags
+- GitHub Actions CI
+- Vercel Deploy
 
 ```
