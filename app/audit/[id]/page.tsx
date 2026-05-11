@@ -20,6 +20,7 @@ import {
   AlertCircle,
   Wrench
 } from 'lucide-react'
+import { EmailCapture } from '@/components/EmailCapture'
 
 const TOOL_LABELS: Record<string, string> = {
   cursor: 'Cursor',
@@ -285,6 +286,15 @@ export default function AuditPage({ params }: { params: Promise<{ id: string }> 
           </Button>
         </div>
 
+        {/* Email Capture Dialog */}
+        {report && (
+          <EmailCapture 
+            isOpen={showEmailCapture} 
+            onClose={() => setShowEmailCapture(false)} 
+            auditId={id} 
+            report={report} 
+          />
+        )}
       </div>
     </div>
   )
