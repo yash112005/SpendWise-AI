@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import type { AuditReport } from '@/types'
+import type { Metadata } from 'next'
 import { 
   CheckCircle2, 
   TrendingDown, 
@@ -31,6 +32,32 @@ const TOOL_LABELS: Record<string, string> = {
   openai_api: 'OpenAI API',
   gemini: 'Gemini',
   windsurf: 'Windsurf',
+}
+
+
+export async function generateMetadata(
+  { params }: { params: { id: string } }
+): Promise<Metadata> {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_APP_URL}/api/audit?id=${params.id}`
+  )
+  const audit = await res.json()
+
+  const savings = audit.totalMonthlySavings?.toFixed(0) || '0'
+
+  return {
+    title: `Maine $${savings}/mo save kiya AI tools pe — dekho tum kitna save kar sakte ho`,
+    description: `Free AI spend audit — find out where you're overspending on Cursor, Claude, ChatGPT and more.`,
+    openGraph: {
+      title: `Maine $${savings}/mo save kiya AI tools pe`,
+      description: 'Free AI Spend Audit by Credex',
+      url: `${process.env.NEXT_PUBLIC_APP_URL}/audit/${params.id}`,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `Maine $${savings}/mo save kiya AI tools pe`,
+    },
+  }
 }
 
 export default function AuditPage({ params }: { params: Promise<{ id: string }> }) {
