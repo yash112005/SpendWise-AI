@@ -60,8 +60,12 @@ export async function generateMetadata(
   }
 }
 
-export default function AuditPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params)
+export default function AuditPage({
+  params,
+}: {
+  params: { id: string }
+}) {
+  const { id } = params
 
   const [report, setReport] = useState<AuditReport | null>(null)
   const [loading, setLoading] = useState(true)
