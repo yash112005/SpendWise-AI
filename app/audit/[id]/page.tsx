@@ -4,12 +4,10 @@ import AuditClient from './AuditClient'
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ id: string }>
+  params: { id: string }
 }): Promise<Metadata> {
-  const { id } = await params
-
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_APP_URL}/api/audit?id=${id}`,
+    `${process.env.NEXT_PUBLIC_APP_URL}/api/audit?id=${params.id}`,
     {
       cache: 'no-store',
     }
@@ -26,12 +24,10 @@ export async function generateMetadata({
   }
 }
 
-export default async function Page({
+export default function Page({
   params,
 }: {
-  params: Promise<{ id: string }>
+  params: { id: string }
 }) {
-  const { id } = await params
-
-  return <AuditClient id={id} />
+  return <AuditClient id={params.id} />
 }
