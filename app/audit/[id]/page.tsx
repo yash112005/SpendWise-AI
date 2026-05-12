@@ -21,14 +21,6 @@ export async function generateMetadata({
       }
     )
 
-    if (!res.ok) {
-      return {
-        title: 'AI Spend Audit',
-        description:
-          "Free AI spend audit — find out where you're overspending on Cursor, Claude, ChatGPT and more.",
-      }
-    }
-
     const audit = await res.json()
 
     const savings =
@@ -39,9 +31,7 @@ export async function generateMetadata({
       description:
         "Free AI spend audit — find out where you're overspending on Cursor, Claude, ChatGPT and more.",
     }
-  } catch (error) {
-    console.error('Metadata fetch error:', error)
-
+  } catch {
     return {
       title: 'AI Spend Audit',
       description:
