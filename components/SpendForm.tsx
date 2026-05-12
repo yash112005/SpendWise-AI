@@ -123,19 +123,23 @@ export default function SpendForm() {
     }))
   }
 
-  const updateTool = (
-    toolName: ToolName,
-    field: keyof ToolInput,
-    value: string | number
-  ) => {
-    setFormData((prev) => ({
-      ...prev,
-      tools: prev.tools.map((t) =>
-        t.tool === toolName ? { ...t, [field]: value } : t
-      ),
-    }))
-  }
-
+ const updateTool = (
+  toolName: ToolName,
+  field: keyof ToolInput,
+  value: string | number | null
+) => {
+  setFormData((prev) => ({
+    ...prev,
+    tools: prev.tools.map((t) =>
+      t.tool === toolName
+        ? {
+            ...t,
+            [field]: value ?? "",
+          }
+        : t
+    ),
+  }))
+}
   // ============================================
   // TOTAL SPEND
   // ============================================
