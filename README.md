@@ -74,16 +74,23 @@ npm run dev
 - Anthropic API Summary
 - Email Capture Component
 
+## Day 5  Progress
+
+### Completed
+- OG Tags
+- GitHub Actions CI
+- Vercel Deploy
+
 ## Current Status
 
 Day 1 completed successfully ✅
 Day 2 completed successfully ✅
 Day 3 completed sucessfully ✅
 Day 4 completed sucessfully ✅
+Day 5 completed sucessfully ✅
 
 Next step:
-- OG Tags
-- GitHub Actions CI
-- Vercel Deploy
+- Entrepreneurial Files + Lighthouse
+- Polish + Submit
 
 ```
