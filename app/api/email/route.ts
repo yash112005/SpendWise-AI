@@ -71,7 +71,7 @@ export async function POST(request: NextRequest) {
           </ul>
 
           <p style="margin-top: 30px;">
-            <a href="${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'}/audit/${auditId}" 
+            <a href="${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/audit/${auditId}" 
                style="background: #10b981; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block;">
               View Full Report Online
             </a>
