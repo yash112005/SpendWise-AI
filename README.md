@@ -81,6 +81,12 @@ npm run dev
 - GitHub Actions CI
 - Vercel Deploy
 
+
+## Day 6  Progress
+
+### Completed
+- Entrepreneurial Files + Lighthouse
+- Polish + Submit
 ## Current Status
 
 Day 1 completed successfully ✅
@@ -88,9 +94,9 @@ Day 2 completed successfully ✅
 Day 3 completed sucessfully ✅
 Day 4 completed sucessfully ✅
 Day 5 completed sucessfully ✅
+Day 6 completed sucessfully ✅
 
-Next step:
-- Entrepreneurial Files + Lighthouse
-- Polish + Submit
+
+
 
 ```
