@@ -11,7 +11,7 @@ export async function generateMetadata({
   params,
 }: Props): Promise<Metadata> {
   const baseUrl =
-    process.env.NEXT_PUBLIC_SUPABASE_URL || 'http://localhost:3000'
+    process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
 
   try {
     const res = await fetch(
